@@ -1,3 +1,4 @@
+#!/bin/python
 """
 Title: 3SUM Algorithm implementation in Python
 Author: Maxwell Haley
@@ -6,6 +7,8 @@ Description: Implementation of the 3SUM quadratic algorithm in Python. Done for
 
 Use the script by calling it followed by one of the included test files. Or, 
 make your own test file by placing a list of numbers in one line.
+
+./3SUM.py test1
 
 This implementation does not use the combinations function from itertools,
 despite it doing the same thing in fewer lines of code. I've included that sol-
