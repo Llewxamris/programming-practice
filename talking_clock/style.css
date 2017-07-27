@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+    width: 90%;
+    margin: auto;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
