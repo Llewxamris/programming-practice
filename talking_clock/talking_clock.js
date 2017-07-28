@@ -4,12 +4,12 @@ const hours = ['twelve', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
 'seventeen', 'eighteen', 'nineteen'];
 const minutes = ['oh', 'twenty', 'thirty', 'forty', 'fifty', 'sixty'];
 
-let validateUserTime = (usrTime) => {
+const validateUserTime = (usrTime) => {
     const validRegex = /^\d?\d:?\d{2}$/
     return validRegex.test(usrTime);
 }
 
-let displayError = (usrTime) => {
+const displayError = (usrTime) => {
     const response = document.getElementById('clockResponse');
 
     if (usrTime == "") {
@@ -20,7 +20,7 @@ let displayError = (usrTime) => {
     response.innerHTML = `"${usrTime}" is not a valid 24-hour time.`;
 }
 
-let formatTime = (usrTime) => {
+const formatTime = (usrTime) => {
     /* Formats the time to always follow the format: ##:## */
 
     // If user input is #:##
@@ -37,7 +37,7 @@ let formatTime = (usrTime) => {
     return usrTime;
 }
 
-let displayTime = (usrTime) => {
+const displayTime = (usrTime) => {
     if(usrTime.length < 5) {
         usrTime = formatTime(usrTime);
     }
