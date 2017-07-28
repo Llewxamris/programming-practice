@@ -5,11 +5,15 @@ const hours = ['twelve', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
 const minutes = ['oh', 'twenty', 'thirty', 'forty', 'fifty', 'sixty'];
 
 const validateUserTime = (usrTime) => {
+    /* Validate return the status of testing param usrTime against
+     * a valid regex. */
     const validRegex = /^\d?\d:?\d{2}$/
     return validRegex.test(usrTime);
 }
 
 const displayError = (usrTime) => {
+    /* Display an error to the user, using their input param usrTime */
+    // TODO: Pass in response object as param from onclick() event
     const response = document.getElementById('clockResponse');
 
     if (usrTime == "") {
@@ -22,7 +26,6 @@ const displayError = (usrTime) => {
 
 const formatTime = (usrTime) => {
     /* Formats the time to always follow the format: ##:## */
-
     // If user input is #:##
     if(usrTime.includes(':') && usrTime.length == 4) {
         usrTime = '0'.concat(usrTime);
@@ -38,6 +41,8 @@ const formatTime = (usrTime) => {
 }
 
 const displayTime = (usrTime) => {
+    /* Format the param usrTime if necessary, then display to user in
+     * equivalent English. */
     if(usrTime.length < 5) {
         usrTime = formatTime(usrTime);
     }
@@ -45,6 +50,7 @@ const displayTime = (usrTime) => {
 }
 
 document.getElementById("btnGetTime").onclick = () =>  {
+    /* Flow to validate user input, then display results.  */
     const response = document.getElementById('clockResponse');
 
     if(response.classList.contains('error')) {
