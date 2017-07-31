@@ -11,9 +11,8 @@ const validateUserTime = (usrTime) => {
     return validRegex.test(usrTime);
 }
 
-const displayError = (usrTime) => {
+const displayError = (usrTime, response) => {
     /* Display an error to the user, using their input param usrTime */
-    // TODO: Pass in response object as param from onclick() event
     const response = document.getElementById('clockResponse');
 
     if (usrTime === "") {
@@ -61,7 +60,7 @@ document.getElementById("btnGetTime").onclick = () =>  {
     const usrTime = document.getElementById("txtTime").value;
 
     if (validateUserTime(usrTime) === false) {
-        displayError(usrTime);
+        displayError(usrTime, response);
     } else {
         displayTime(usrTime);
     }
