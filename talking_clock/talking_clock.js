@@ -16,7 +16,7 @@ const displayError = (usrTime) => {
     // TODO: Pass in response object as param from onclick() event
     const response = document.getElementById('clockResponse');
 
-    if (usrTime == "") {
+    if (usrTime === "") {
         usrTime = 'Nothing';
     }
 
@@ -27,10 +27,10 @@ const displayError = (usrTime) => {
 const formatTime = (usrTime) => {
     /* Formats the time to always follow the format: ##:## */
     // If user input is #:##
-    if(usrTime.includes(':') && usrTime.length == 4) {
+    if(usrTime.includes(':') && usrTime.length === 4) {
         usrTime = '0'.concat(usrTime);
     // If user input is ####
-    } else if (!usrTime.includes(':') && usrTime.length == 4) {
+    } else if (!usrTime.includes(':') && usrTime.length === 4) {
         usrTime = usrTime.substr(0,2) + ':' + usrTime.substr(2);
     // If user input is ###
     } else {
@@ -60,7 +60,7 @@ document.getElementById("btnGetTime").onclick = () =>  {
 
     const usrTime = document.getElementById("txtTime").value;
 
-    if (validateUserTime(usrTime) == false) {
+    if (validateUserTime(usrTime) === false) {
         displayError(usrTime);
     } else {
         displayTime(usrTime);
