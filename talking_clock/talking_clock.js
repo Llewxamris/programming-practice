@@ -12,7 +12,7 @@ const validateUserTime = (usrTime) => {
 };
 
 const generateError = (usrTime) => {
-    /* Display an error to the user, using their input param usrTime */
+    /* Generate and return an error message for an invalid 24-hour time. */
     if (usrTime === '') {
         usrTime = 'Nothing';
     }
@@ -37,8 +37,7 @@ const formatTime = (usrTime) => {
 };
 
 const generateTime = (usrTime) => {
-    /* Format the param usrTime if necessary, then display to user in
-     * equivalent English. */
+    /* Format the param usrTime if necessary, then return the English string */
     if(usrTime.length < 5) {
         usrTime = formatTime(usrTime);
     }
