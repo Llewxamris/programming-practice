@@ -36,13 +36,14 @@ const formatTime = (usrTime) => {
     return usrTime;
 };
 
-const displayTime = (usrTime) => {
+const generateTime = (usrTime) => {
     /* Format the param usrTime if necessary, then display to user in
      * equivalent English. */
     if(usrTime.length < 5) {
         usrTime = formatTime(usrTime);
     }
     // TODO: Convert usrTime (numerical) to English (alphabetical).
+    return '';
 };
 
 document.getElementById('btnGetTime').onclick = () =>  {
@@ -60,6 +61,6 @@ document.getElementById('btnGetTime').onclick = () =>  {
         response.classList.add('error');
         response.innerHTML = generateError(usrTime);
     } else {
-        displayTime(usrTime);
+        response.innerHTML = generateTime(usrTime);
     }
 };
