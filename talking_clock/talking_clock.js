@@ -11,14 +11,13 @@ const validateUserTime = (usrTime) => {
     return validRegex.test(usrTime);
 };
 
-const displayError = (usrTime, response) => {
+const generateError = (usrTime) => {
     /* Display an error to the user, using their input param usrTime */
     if (usrTime === '') {
         usrTime = 'Nothing';
     }
 
-    response.classList.add('error');
-    response.innerHTML = `"${usrTime}" is not a valid 24-hour time.`;
+    return `"${usrTime}" is not a valid 24-hour time.`;
 };
 
 const formatTime = (usrTime) => {
@@ -58,7 +57,8 @@ document.getElementById('btnGetTime').onclick = () =>  {
     const usrTime = document.getElementById('txtTime').value;
 
     if (validateUserTime(usrTime) === false) {
-        displayError(usrTime, response);
+        response.classList.add('error');
+        response.innerHTML = generateError(usrTime);
     } else {
         displayTime(usrTime);
     }
