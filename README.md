@@ -9,7 +9,7 @@ Implementation of the [3SUM](https://en.wikipedia.org/wiki/3SUM) problem in
 Python.
 
 ### Disemvowler
-Vowel ripper n'tearer. Strips all the vowels out of a string, and returns the
+Vowel ripper n'tearer. Strips all the vowels out of a string. Returns the
 mutilated string, and it's remains. Written in Python.
 
 ### Talkin' Clock
