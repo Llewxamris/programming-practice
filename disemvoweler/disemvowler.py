@@ -14,7 +14,6 @@ Second, pipe text from another program to this script.
 `echo 'This is a sentace' | ./disemvowler.py`
 `cat text1.txt | ./disemvowler.py`
 """
-import random
 import sys
 
 targets = ('a', 'e', 'i', 'o', 'u')
