@@ -13,8 +13,8 @@ Vowel ripper n'tearer. Strips all the vowels out of a string. Returns the
 mutilated string, and it's remains. Written in Python.
 
 ### Talkin' Clock
-Enter in a 24-hour format time, and the page returns tells you that time in
-English. Written in JavaScript.
+Development in progress. Enter in a 24-hour format time, and the page returns 
+tells you that time in English. Written in JavaScript.
 
 ### Hyle
 Calculate cost to tile a room. Incredibly simple. Made in, and made to learn the
