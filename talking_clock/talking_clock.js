@@ -41,8 +41,17 @@ const generateTime = (usrTime) => {
     if(usrTime.length < 5) {
         usrTime = formatTime(usrTime);
     }
-    // TODO: Convert usrTime (numerical) to English (alphabetical).
-    return '';
+
+    const hrs = Number(usrTime.substring(0,2));
+    const tmin = Number(usrTime.substring(3,4));
+    const omin = Number(usrTime.substring(4,5));
+    console.log('--- DEBUG USRTIME SUBBING ---');
+    console.log(hrs);
+    console.log(tmin);
+    console.log(omin);
+    console.log(hours[hrs]);
+    console.log(minutes[tmin]);
+    console.log(hours[omin]);
 };
 
 document.getElementById('btnGetTime').onclick = () =>  {

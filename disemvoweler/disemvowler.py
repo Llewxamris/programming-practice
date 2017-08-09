@@ -26,5 +26,5 @@ for pos, limb in enumerate(victim):
         del victim[pos]
         remains.append(limb)
 
-print(''.join(victim).replace(' ', ''))
-print(''.join(remains))
+print(str.join('', victim).replace(' ', ''))
+print(str.join('', remains))
